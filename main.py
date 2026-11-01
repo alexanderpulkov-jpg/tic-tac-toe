@@ -46,6 +46,22 @@ def read_name(prompt):
         print("Имя не может быть пустым!")
 
 def make_move(field, symbol):
+    while True:
+        line =  read_number('Введите номер строки(1-3): ')
+        column =  read_number('Введите номер столбца(1-3): ')
+
+        index = (line-1)*3 + (column-1)
+
+        if field[index] != '_':
+            print("\nЭта клетка уже занята!\n")
+            continue
+
+        field[index] = symbol
+
+        print('\nИгровое поле:')
+        print('', *field[:3], '\n', *field[3:6], '\n', *field[6:], '\n')
+
+        return
 
 def win(field, symbol):
 
