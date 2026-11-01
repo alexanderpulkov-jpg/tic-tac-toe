@@ -64,6 +64,10 @@ def make_move(field, symbol):
         return
 
 def win(field, symbol):
+    for a, b, c in win_comb:
+        if field[a] == field[b] == field[c] == symbol:
+            return True
+    return False
 
 def main():
 
