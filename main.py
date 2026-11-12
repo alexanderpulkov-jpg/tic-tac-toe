@@ -32,6 +32,11 @@ def start():
     print("Ничья!") 
 
 def read_number(prompt):
+    while True:
+        value = input(prompt).strip()
+        if value in ('1', '2', '3'):
+            return int(value)
+        print("Введите число от 1 до 3!")
 
 def read_name(prompt):
 
