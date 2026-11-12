@@ -39,6 +39,11 @@ def read_number(prompt):
         print("Введите число от 1 до 3!")
 
 def read_name(prompt):
+    while True:
+        name = input(prompt).strip()
+        if name:
+            return name
+        print("Имя не может быть пустым!")
 
 def make_move(field, symbol):
 
