@@ -70,6 +70,18 @@ def win(field, symbol):
     return False
 
 def main():
+    try:
+        while True:
+            answer = input("\nВы хотите начать игру(+/-)? ").strip()
+            if answer == '+':
+                start()
+            elif answer == '-':
+                print("Пока!")
+                break
+            else:
+                print('Некорректный символ')
+    except (KeyboardInterrupt, EOFError):
+        print("\nУспокойся!")
 
 if __name__ == '__main__':
     main()
